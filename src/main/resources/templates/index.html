@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_header :: header"></head>
+
+<body>
+
+<div th:replace="_navigation :: navi"></div>
+<div class="container">
+
+    <div class="row justify-content-center align-items-center">
+        <p style="color: brown" th:if="${message}" th:text="${message}"></p>
+        <h4 th:if="${info}" th:text="'Zaaktualizowałeś task: ' + ${info}"></h4>
+    </div>
+
+    <div class="row justify-content-center align-items-center">
+        <div th:replace="_table :: table">
+        </div>
+    </div>
+</div>
+</body>
+</html>

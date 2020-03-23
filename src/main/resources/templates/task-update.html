@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_header :: header"></head>
+<body>
+<div th:replace="_navigation :: navi"></div>
+<div lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="table">
+    <form action="/edit-save" method="post" id="edit"></form>
+    <table class="table table-hover table-bordered table-fixed">
+        <thead>
+        <tr>
+            <th>partner code</th>
+            <th>name</th>
+            <th>description</th>
+            <th>urgency</th>
+            <th>importance</th>
+            <th>colorCategory</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td th:text="${taskDTO.getUuid()}"></td>
+            <td><input type="text" name="name" form="edit" th:value="${taskDTO.getName()}"></td>
+            <td><input type="text" name="description" form="edit" th:value="${taskDTO.getDescription()}"></td>
+            <td><input type="range" max="5" name="urgency" form="edit" th:value="${taskDTO.getUrgency()}"></td>
+            <td><input type="range" max="5" name="importance" form="edit" th:value="${taskDTO.getImportance()}"></td>
+            <td>
+                <input type="hidden" name="uuid" form="edit" th:value="${taskDTO.getUuid}">
+                <input type="submit" class="btn btn-outline-info btn-sm" form="edit">save</input>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

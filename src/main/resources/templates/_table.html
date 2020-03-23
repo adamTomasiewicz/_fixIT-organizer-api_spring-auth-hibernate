@@ -1,0 +1,36 @@
+<div lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="table">
+    <table class="table table-hover table-bordered table-fixed">
+        <thead>
+        <tr>
+
+            <th>uuid</th>
+            <th>name</th>
+            <th>description</th>
+            <th>urgency</th>
+            <th>importance</th>
+            <th>colorCategory</th>
+            <th>
+                <form action="/new-page" method="get">
+                    <button type="submit" class="btn btn-outline-success btn-sm">new</button>
+                </form>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="t : ${tasks}">
+            <td th:text="${t.getUuid()}"></td>
+            <td th:text="${t.getName()}"></td>
+            <td th:text="${t.getDescription()}"></td>
+            <td th:text="${t.getUrgency()}"></td>
+            <td th:text="${t.getImportance()}"></td>
+            <td th:text="${t.getColorCategory}"></td>
+            <td>
+                <form action="/edit" method="get">
+                    <input type="hidden" name="uuid" th:value="${t.getUuid()}">
+                    <button type="submit" class="btn btn-outline-info btn-sm">edit</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
