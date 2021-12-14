@@ -35,7 +35,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- VERSIONS -->
         <spring-framework-boot.version>2.2.5.RELEASE</spring-framework-boot.version>
-<log4j2Version>LATEST</log4j2Version>
+<log4j2Version>2.16.0</log4j2Version>
 
         <postgresql.version>42.2.10</postgresql.version>
         <hibernate.version>5.4.10.Final</hibernate.version>
