@@ -37,7 +37,7 @@
         <spring-framework-boot.version>2.2.5.RELEASE</spring-framework-boot.version>
 <log4j2Version>LATEST</log4j2Version>
 
-        <postgresql.version>42.2.10</postgresql.version>
+        <postgresql.version>42.4.1</postgresql.version>
         <hibernate.version>5.4.10.Final</hibernate.version>
 <!--        <logback.version>1.0.13</logback.version>-->
 <!--        <slf4j.version>1.7.5</slf4j.version>-->
